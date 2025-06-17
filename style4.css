@@ -1,0 +1,124 @@
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+body{
+    transition: background-color 1s ease ;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+   
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    background-color: rgb(15, 14, 14);
+    height: 6rem;
+    padding: 2rem 5rem;
+    justify-content: space-between;
+    color: azure;
+}
+.logo{
+    font-size: 2.5rem;
+    margin-left: 2rem;
+
+}
+.nav-links{
+    display: flex;
+    gap: 2rem;
+    
+    list-style: none;
+}
+.nav-item{
+  font-size: 2rem;
+}
+
+.hamburger{
+    display: none;
+}
+
+.hamburger span{
+    display: block;
+    height: 3px;
+    width: 25px;
+    margin: 5px;
+    background-color: beige;
+}
+
+.welcome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 25rem;
+    background-color: aliceblue;
+    
+    
+}
+.welcome h2 {
+    font-size: 3rem;
+    padding: 2rem;
+}
+.welcome p {
+    font-size: 2rem;
+    padding: 2rem;
+
+}
+.welcome button{
+   font-size: 2rem;
+   border-radius: 10px;
+   border: none;
+   padding: 10px;
+   color: azure;
+   height: auto;  
+   background-color:black;
+}
+.Api-data{
+    padding:2rem;
+    overflow-x: auto ;
+
+}
+
+
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+
+}
+th{
+    background-color: black;
+    color: aliceblue;
+}
+@media (max-width:780px){
+    .navbar{
+        padding: 1rem;
+    }
+
+    .nav-links{
+     display:none;
+     flex-direction: column;
+     position: absolute;
+     top:6rem;
+     left: 0;
+     background-color: black;
+     width: 100%;
+     padding:2rem
+    
+    }
+    .nav-links.active{
+        display: flex;
+    }
+    .hamburger{
+        display: block;
+    }
+}

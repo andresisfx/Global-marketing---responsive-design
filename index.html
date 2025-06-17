@@ -1,0 +1,113 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Únete a Nuestro Equipo - Landing SPA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header - Barra de navegación -->
+     <header>
+        <div class="container">
+            <div class="logo">
+                <img src="/img/nosotros.jpg" alt="">
+            </div>
+            <div class="title">
+                <h1>Software Machine</h1>
+            </div>
+            <div class="nav-container ">
+                <nav>
+                    <ul class="nav-links">
+                        <li class="nav-item">Services</li>
+                        <li class="nav-item">Company</li>
+                        <li class="nav-item">jobs</li>
+                        <li class="nav-item">Contact</li>
+                        <li class="nav-item"></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+     </header>
+    <!-- Hero Section - Primera sección visible -->
+    <section id="hero" class="full-height">
+        <h1 data-animate="fade-up">Únete a nuestro equipo</h1>
+        <!-- Botón con atributo data-* para scroll suave -->
+        <a href="#jobs" class="cta-button" data-smooth-scroll>Ver vacantes</a>
+        
+        <!-- Indicador visual para scroll (opcional) -->
+        <div class="scroll-indicator" data-animate="fade-in">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Jobs Section - Listado de trabajos -->
+    <section id="jobs" class="section-padding">
+        <h2 data-animate="fade-up">Vacantes Disponibles</h2>
+        
+        <!-- Tarjeta de trabajo con animación fade-in -->
+        <div class="job-card" data-animate="fade-in">
+            <h3>Front End Developer</h3>
+            <ul class="requirements">
+                <li>HTML5/CSS3 avanzado</li>
+                <li>JavaScript ES6+</li>
+                <li>Experiencia con frameworks modernos</li>
+            </ul>
+            <button class="apply-button" data-modal-trigger="frontend-modal">Aplicar</button>
+        </div>
+        
+        <!-- Segunda tarjeta -->
+        <div class="job-card" data-animate="fade-in">
+            <h3>UI/UX Designer</h3>
+            <ul class="requirements">
+                <li>Experiencia en diseño de interfaces</li>
+                <li>Manejo de Figma/Adobe XD</li>
+                <li>Conocimientos de prototipado</li>
+            </ul>
+            <button class="apply-button" data-modal-trigger="designer-modal">Aplicar</button>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="section-padding">
+        <h2 data-animate="fade-up">Contáctanos</h2>
+        
+        <!-- Formulario con validación en tiempo real -->
+        <form id="contact-form" class="contact-form">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required 
+                       data-validate="text" data-error="name-error">
+                <span id="name-error" class="error-message"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required 
+                       data-validate="email" data-error="email-error">
+                <span id="email-error" class="error-message"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" required 
+                          data-validate="text" data-error="message-error"></textarea>
+                <span id="message-error" class="error-message"></span>
+            </div>
+            
+            <button type="submit" class="cta-button">Enviar Mensaje</button>
+        </form>
+    </section>
+
+    <!-- Modal (oculto inicialmente) -->
+    <div id="frontend-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Aplicar a Front End Developer</h3>
+            <!-- Contenido del modal -->
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
